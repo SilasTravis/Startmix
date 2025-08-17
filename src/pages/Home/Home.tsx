@@ -1,4 +1,3 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import Hero from "../../components/home/Hero";
 import CatalogSlider from "../../components/home/CatalogSlider";
@@ -7,12 +6,12 @@ import ImageWithText from "../../components/common/ImageWithText";
 import SectionTitle from "../../components/common/SectionTitle";
 import CallToAction from "../../components/home/CallToAction";
 
-const Home: React.FC = () => {
+const Home = ({ onActionModal }: { onActionModal: () => void }) => {
   const { t } = useTranslation();
 
   return (
     <>
-      <Hero />
+      <Hero onActionModal={onActionModal} />
       <CatalogSlider />
       <BrandSlider />
       <SectionTitle title={t("future.title")} subtitle={t("future.subtitle")} />
@@ -35,8 +34,9 @@ const Home: React.FC = () => {
         imagePosition="left"
       />
       <CallToAction
+        onActionModal={onActionModal}
         title={t("cta.title")}
-        buttonText={t("cta.button")}
+        buttonText={t("hero.button1")}
         imageUrl="/images/original-cement.png"
       />
     </>

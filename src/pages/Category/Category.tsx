@@ -2,14 +2,14 @@ import React, { useState, useMemo, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { categories } from "../../config-data/categories";
-import { FiSearch, FiChevronRight } from "react-icons/fi";
+import { FiChevronRight } from "react-icons/fi";
 
 const CategoryPage: React.FC = () => {
   const { t, i18n } = useTranslation();
   const { categoryId } = useParams<{ categoryId: string }>();
   const navigate = useNavigate();
 
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm] = useState("");
   const activeCategory = useMemo(
     () =>
       categories.find((c) => c.id === (Number(categoryId) || categories[0].id)),
@@ -75,24 +75,6 @@ const CategoryPage: React.FC = () => {
               ]
             }
           </h1>
-
-          {/* Search and Filters */}
-          <div className="bg-white p-4 rounded-lg shadow-sm mb-6 z-30">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder={`${
-                  activeCategory.name[
-                    i18n.language as keyof typeof activeCategory.name
-                  ]
-                }`}
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#003369] focus:border-transparent transition"
-              />
-              <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-            </div>
-          </div>
 
           {/* Product Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

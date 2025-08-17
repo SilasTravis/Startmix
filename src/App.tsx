@@ -10,16 +10,22 @@ import Footer from "./components/common/Footer";
 import Home from "./pages/Home/Home";
 import Category from "./pages/Category/Category";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
+import { useState } from "react";
+import ContactModal from "./components/ContactModal";
 
 function App() {
+  const [actionModal, setActionModal] = useState(false);
   return (
     <I18nextProvider i18n={i18n}>
       <Router>
         <div className="min-h-screen bg-gray-50 flex flex-col">
-          <Navbar />
+          <Navbar onActionModal={() => setActionModal(true)} />
           <main className="flex-grow">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route
+                path="/"
+                element={<Home onActionModal={() => setActionModal(true)} />}
+              />
               <Route path="/category" element={<Category />}>
                 <Route path=":categoryId" element={<Category />} />
               </Route>
@@ -32,6 +38,7 @@ function App() {
           <Footer />
         </div>
       </Router>
+      <ContactModal open={actionModal} onClose={() => setActionModal(false)} />
     </I18nextProvider>
   );
 }

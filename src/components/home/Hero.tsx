@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@mui/material";
-import { Link } from "react-router";
 
-const Hero = () => {
+const Hero = ({ onActionModal }: { onActionModal: () => void }) => {
   const { t } = useTranslation();
 
   return (
@@ -31,21 +30,20 @@ const Hero = () => {
               {t("hero.subtitle")}
             </p>
             <div className="flex flex-row gap-4 justify-center md:justify-start">
-              <Link to={"/category"}>
-                <Button
-                  variant="contained"
-                  size="large"
-                  sx={{
-                    bgcolor: "white",
-                    color: "primary.main",
-                    "&:hover": { bgcolor: "#f0f0f0" },
-                    px: 4,
-                    py: 1.5,
-                  }}
-                >
-                  {t("hero.button1")}
-                </Button>
-              </Link>
+              <Button
+                onClick={onActionModal}
+                variant="contained"
+                size="large"
+                sx={{
+                  bgcolor: "white",
+                  color: "primary.main",
+                  "&:hover": { bgcolor: "#f0f0f0" },
+                  px: 4,
+                  py: 1.5,
+                }}
+              >
+                {t("hero.button1")}
+              </Button>
             </div>
           </div>
           <div className="w-full"></div>

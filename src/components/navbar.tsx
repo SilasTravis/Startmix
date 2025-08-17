@@ -20,7 +20,7 @@ import type { SelectChangeEvent } from "@mui/material/Select";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { styled } from "@mui/material/styles";
-import ContactModal from "./ContactModal";
+import ReactCountryFlag from "react-country-flag";
 
 const NavLink = styled(Button)(({ theme }) => ({
   color: theme.palette.text.primary,
@@ -31,20 +31,15 @@ const NavLink = styled(Button)(({ theme }) => ({
   },
 }));
 
-const Navbar = () => {
+const Navbar = ({ onActionModal }: { onActionModal: () => void }) => {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const navigate = useNavigate();
 
   const handleOpenContactModal = () => {
-    setIsContactModalOpen(true);
-  };
-
-  const handleCloseContactModal = () => {
-    setIsContactModalOpen(false);
+    onActionModal();
   };
 
   const handleLanguageChange = (event: SelectChangeEvent) => {
@@ -56,9 +51,9 @@ const Navbar = () => {
   };
 
   const navItems = [
+    { path: "/", label: t("navbar.home") },
     { path: "/", label: t("navbar.about") },
     { path: "/category", label: t("navbar.categories") },
-    { path: "/", label: t("navbar.home") },
     { path: "/", label: t("navbar.contact") },
   ];
 
@@ -161,9 +156,30 @@ const Navbar = () => {
                 },
               }}
             >
-              <MenuItem value="en">🇺🇸 {t("language.en")}</MenuItem>
-              <MenuItem value="ru">🇷🇺 {t("language.ru")}</MenuItem>
-              <MenuItem value="uz">🇺🇿 {t("language.uz")}</MenuItem>
+              <MenuItem value="en">
+                <ReactCountryFlag
+                  countryCode="US"
+                  svg
+                  style={{ width: "20px", marginRight: "8px" }}
+                />
+                {t("language.en")}
+              </MenuItem>
+              <MenuItem value="ru">
+                <ReactCountryFlag
+                  countryCode="RU"
+                  svg
+                  style={{ width: "20px", marginRight: "8px" }}
+                />
+                {t("language.ru")}
+              </MenuItem>
+              <MenuItem value="uz">
+                <ReactCountryFlag
+                  countryCode="UZ"
+                  svg
+                  style={{ width: "20px", marginRight: "8px" }}
+                />
+                {t("language.uz")}
+              </MenuItem>
             </Select>
           </FormControl>
         </Stack>
@@ -260,10 +276,6 @@ const Navbar = () => {
       </Menu>
 
       {/* Contact Modal */}
-      <ContactModal
-        open={isContactModalOpen}
-        onClose={handleCloseContactModal}
-      />
     </AppBar>
   );
 };
