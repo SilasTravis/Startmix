@@ -27,7 +27,11 @@ const CallToAction: React.FC<CallToActionProps> = ({
             </button>
           </div>
           <div className="flex justify-center md:justify-end">
-            <img src={imageUrl} alt="Product Image" className="max-w-md" />
+            <img
+              src={imageUrl}
+              alt="Product Image"
+              className="max-w-md w-full"
+            />
           </div>
         </div>
       </div>

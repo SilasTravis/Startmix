@@ -68,11 +68,7 @@ const Footer: React.FC = () => {
                   {t("footer.contact.contact_us")}
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  {t("footer.contact.career")}
-                </a>
-              </li>
+
               <li>
                 <a href="#" className="hover:underline">
                   {t("footer.contact.social")}
@@ -87,10 +83,12 @@ const Footer: React.FC = () => {
               <a href="#" className="text-2xl hover:text-gray-300">
                 <FaTelegramPlane />
               </a>
-              <a href="#" className="text-2xl hover:text-gray-300">
-                <FaFacebookF />
-              </a>
-              <a href="#" className="text-2xl hover:text-gray-300">
+
+              <a
+                href="https://www.instagram.com/startmix_uz?igsh=M2xibGNqYnRlb2U4"
+                target="_blank"
+                className="text-2xl hover:text-gray-300"
+              >
                 <FaInstagram />
               </a>
             </div>
