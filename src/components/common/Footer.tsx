@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { FaTelegramPlane, FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaTelegramPlane, FaInstagram } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
