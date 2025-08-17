@@ -1,0 +1,122 @@
+{
+  "navbar": {
+    "home": "Bosh sahifa",
+    "categories": "Maxsulotlar",
+    "about": "Biz haqimizda",
+    "contact": "Aloqa",
+    "connect": "Bog'lanish"
+  },
+  "language": {
+    "en": "Inglizcha",
+    "ru": "Ruscha",
+    "uz": "O'zbekcha"
+  },
+  "contactForm": {
+    "title": "Biz bilan bog'laning",
+    "name": "Ismingiz",
+    "phone": "Telefon raqamingiz",
+    "message": "Xabaringiz",
+    "submit": "Xabarni yuborish",
+    "success": "Xabaringiz muvaffaqiyatli yuborildi!",
+    "error": "Xabarni yuborishda xatolik yuz berdi. Iltimos, qayta urinib ko'ring.",
+    "validation": {
+      "required": "Ushbu maydonni to'ldirish shart",
+      "phoneInvalid": "Iltimos, to'g'ri telefon raqamini kiriting"
+    },
+    "close": "Yopish"
+  },
+  "hero": {
+    "title": "BIZ BILAN QURING.",
+    "subtitle": "Biz barcha tajribamizni bir joyga jamladik, sizga qulaylik yaratish uchun. Ishonchli va amaliy yondashuv bilan, yangi platformamiz yetakchi yechimlarga oson kirishni ta'minlaydi va sizni har sohada muvaffaqiyatga erishishga ilhomlantiradi.",
+    "button1": "Mahsulotlarimizni o'rganing",
+    "button2": "Hujjatlarimizni qidiring",
+    "catalog": {
+      "title": "Katalog"
+    }
+  },
+  "catalog": {
+    "title": "Kataloglar"
+  },
+  "brands": {
+    "title": "Brendlar"
+  },
+  "experience": {
+    "title": "Turli xil ilovalar, cheksiz tajriba",
+    "text": "Knaufda bizning innovatsiyalarimiz sizning talablaringizni tushunishdan boshlanadi. Ilg'or nou-xau va ijodkorligimiz bilan biz sanoat standartlaridan oshib ketadigan o'yinni o'zgartiruvchi yechimlarni ishlab chiqamiz. Mumkin bo'lgan chegaralarni oshirib, biz sizga loyihangizning har bir jihati uchun mos bo'lgan keng assortimentdagi materiallarni taqdim etamiz - pol va shiftlardan devorlar, tomlar va jabhalar. Bizning malakali jamoalarimiz yong'inga chidamlilik, energiya samaradorligi, barqarorlik va boshqalar bo'yicha eng yuqori darajada ishlashni ta'minlaydi - bu sizga har qanday maqsadga erishish imkonini beradi."
+  },
+  "sustainability": {
+    "title": "Ertaga barqaror uylarni yaratish",
+    "text": "Oilaviy va global miqyosda boshqariladigan Knauf guruhi qurilishning har bir bosqichini soddalashtirib, keng qamrovli yechimlarni taklif qiluvchi va sifat kafolatini ta'minlovchi ishonchli qurilish materiallari yetakchisi hisoblanadi. Taniqli brendlarimiz 90 dan ortiq mamlakatlarda, 80 ta xom ashyoni qayta ishlash zavodi va 300 ta ishlab chiqarish maydonchasiga ega. Aleksandr Knauf, Jörg Kampmeyer va doktor Uve Knotzer boshchiligida biz butun dunyo bo'ylab 40 000 dan ortiq sodiq xodimlar tomonidan amalga oshirilgan barqaror mahsulot portfelimizni kengaytirishda davom etamiz."
+  },
+  "future": {
+    "title": "Kelajakni barpo etamiz",
+    "subtitle": "Qurilish materiallari ishlab chiqarish bo'yicha 90 yillik tajribaga asoslangan holda, biz zamonaviy qurilish chaqiruvlariga innovatsion mahsulotlar, ishonchli sheriklik va global ishtirok bilan javob beramiz."
+  },
+  "technical": {
+    "title": "Murakkab texnik ma'lumotlarni soddalashtirish",
+    "text": "Qurilish jarayonining istalgan bosqichida biz sizning texnik murakkabliklaringizni kamaytirmoqchimiz va sizga ishonch bilan qurish imkoniyatini beramiz. Sizni qo'llab-quvvatlash uchun biz premium yechimlarimizni tushunish, tanlash va o'rnatishni osonlashtiramiz. Resurslarimiz assortimenti mahsulot haqida ma'lumot paketlari, yong'inga qarshi xavfsizlik hujjatlari, zamonaviy sinov sertifikatlari va to'g'ri materiallarni osongina tanlash uchun raqamli vositalarni o'z ichiga oladi."
+  },
+  "cta": {
+    "title": "Tsementni ishlab chiqaruvchidan buyurtma qilib, siz o'zingizni qalbakilashtirishdan himoya qilasiz va yuqori sifatli mahsulotni kafolatli olasiz!",
+    "button": "Mahsulotlarni tanlang"
+  },
+  "footer": {
+    "about": {
+      "title": "Biz haqimizda",
+      "who_we_are": "Biz kimmiz",
+      "what_we_do": "Nima qilamiz",
+      "our_history": "Bizning Tarix",
+      "address_book": "Manzillar kitobi",
+      "suppliers": "Yetkazib beruvchilar"
+    },
+    "organizations": {
+      "title": "Bizning tashkilotlar",
+      "gypsum": "StartMix Gips",
+      "insulation": "StartMix Izolyatsiya",
+      "ceiling": "StartMix Shift yechimlari"
+    },
+    "resources": {
+      "title": "Resurslar",
+      "all_products": "Barcha mahsulotlar",
+      "download_center": "Yuklab olish markazi"
+    },
+    "contact": {
+      "title": "StartMix bilan bog'lanish",
+      "contact_us": "Biz bilan bog'lanish",
+      "career": "Global martaba",
+      "social": "Ijtimoiy tarmoqlar"
+    },
+    "address": "Toshkent shahri, Olmazor tumani, Sebzor ko'chasi, 22A"
+  },
+  "contactModal": {
+    "title": "Mijoz bo'ling",
+    "subtitle": "Bizning jamoamiz ularning biznesi bilan uzoq vaqt shug'ullanganda, mijozlarimiz eng yaxshi natijalarga erishadilar.",
+    "telegram_button": "Telegram",
+    "phone_button": "+998 99 815 09 22",
+    "name_label": "Ism",
+    "name_placeholder": "Ismingizni kiriting",
+    "phone_label": "Telefon raqami",
+    "phone_placeholder": "+998",
+    "email_label": "Pochta",
+    "email_placeholder": "jane@framer.com",
+    "submit_button": "Yuborish",
+    "success_message": "Xabaringiz muvaffaqiyatli yuborildi!",
+    "error_message": "Xabarni yuborishda xatolik yuz berdi. Iltimos, keyinroq qayta urinib ko'ring.",
+    "validation_required": "Ushbu maydon to'ldirilishi shart",
+    "validation_email": "Iltimos, haqiqiy elektron pochta manzilini kiriting"
+  },
+  "product": {
+    "not_found": "Mahsulot topilmadi",
+    "back_to_home": "Bosh sahifaga qaytish",
+    "reviews": "ta fikr-mulohazalar",
+    "in_stock": "Sotuvda mavjud",
+    "description": "Tavsif",
+    "specifications": "Texnik xususiyatlar",
+    "add_to_cart": "Savatga qo'shish",
+    "free_shipping": "50$ dan ortiq buyurtmalarda bepul yetkazib berish",
+    "warranty": "Barcha mahsulotlarga 2 yil kafolat",
+    "secure_payment": "SSL shifrlash bilan xavfsiz to'lov",
+    "product_description": "Mahsulot tavsifi",
+    "quantity": "Miqdori"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "navbar": {
+    "home": "Home",
+    "categories": "Products",
+    "about": "About",
+    "contact": "Contact",
+    "connect": "Connect"
+  },
+  "language": {
+    "en": "English",
+    "ru": "Russian",
+    "uz": "Uzbek"
+  },
+  "contactForm": {
+    "title": "Contact Us",
+    "name": "Your Name",
+    "phone": "Phone Number",
+    "message": "Your Message",
+    "submit": "Send Message",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again.",
+    "validation": {
+      "required": "This field is required",
+      "phoneInvalid": "Please enter a valid phone number"
+    },
+    "close": "Close"
+  },
+  "hero": {
+    "title": "BUILD ON US.",
+    "subtitle": "We combine all our experience in one place to create convenience for you. With a reliable and practical approach, our new platform provides easy access to leading solutions and inspires you to succeed in any field.",
+    "button1": "Explore our products",
+    "button2": "Search our documents",
+    "catalog": {
+      "title": "Catalog"
+    }
+  },
+  "catalog": {
+    "title": "Catalogs"
+  },
+  "brands": {
+    "title": "Brands"
+  },
+  "experience": {
+    "title": "Diverse Applications, Limitless Experience",
+    "text": "At Knauf, our innovations begin with understanding your needs. With advanced know-how and creativity, we develop game-changing solutions that exceed industry standards. Pushing the boundaries of what's possible, we offer a wide range of materials suitable for every aspect of your project - from floors and ceilings to walls, roofs, and facades. Our skilled teams ensure the highest level of performance in fire resistance, energy efficiency, sustainability, and more - enabling you to achieve any goal."
+  },
+  "sustainability": {
+    "title": "Creating Sustainable Homes for Tomorrow",
+    "text": "The family- and globally-managed Knauf Group is a leading supplier of reliable building materials that simplifies every stage of construction, offering comprehensive solutions and ensuring quality assurance. Our well-known brands are present in more than 90 countries, with 80 raw material processing plants and 300 production sites. Under the leadership of Alexander Knauf, Jörg Kampmeyer, and Dr. Uwe Knotzer, we continue to expand our sustainable product portfolio, implemented by over 40,000 dedicated employees worldwide."
+  },
+  "future": {
+    "title": "Building the Future",
+    "subtitle": "Based on 90 years of experience in the production of building materials, we respond to modern construction challenges with innovative products, reliable partnership, and global presence."
+  },
+  "technical": {
+    "title": "Simplifying Complex Technical Information",
+    "text": "At any stage of the construction process, we aim to reduce your technical complexities and give you the confidence to build. To support you, we make our premium solutions easy to understand, select, and install. Our resource assortment includes product information packages, fire safety documents, modern test certificates, and digital tools for easy selection of the right materials."
+  },
+  "cta": {
+    "title": "By ordering cement from the manufacturer, you protect yourself from counterfeits and are guaranteed to receive a high-quality product!",
+    "button": "Choose Products"
+  },
+  "footer": {
+    "about": {
+      "title": "About Us",
+      "who_we_are": "Who we are",
+      "what_we_do": "What we do",
+      "our_history": "Our History",
+      "address_book": "Address Book",
+      "suppliers": "Suppliers"
+    },
+    "organizations": {
+      "title": "Our Organizations",
+      "gypsum": "StartMix Gypsum",
+      "insulation": "StartMix Insulation",
+      "ceiling": "StartMix Ceiling Solutions"
+    },
+    "resources": {
+      "title": "Resources",
+      "all_products": "All Products",
+      "download_center": "Download Center"
+    },
+    "contact": {
+      "title": "Contact StartMix",
+      "contact_us": "Contact Us",
+      "career": "Global Career",
+      "social": "Social Channels"
+    },
+    "address": "Tashkent city, Almazar district, street, Sebzor, 22A"
+  },
+  "contactModal": {
+    "title": "Become a client",
+    "subtitle": "Our clients get the best results when our team handles their business over a long period of time.",
+    "telegram_button": "Telegram",
+    "phone_button": "+998 99 815 09 22",
+    "name_label": "Name",
+    "name_placeholder": "Enter name",
+    "phone_label": "Phone number",
+    "phone_placeholder": "+998",
+    "email_label": "Email",
+    "email_placeholder": "jane@framer.com",
+    "submit_button": "Send",
+    "success_message": "Your message has been sent successfully!",
+    "error_message": "Failed to send message. Please try again later.",
+    "validation_required": "This field is required",
+    "validation_email": "Please enter a valid email address"
+  },
+  "product": {
+    "not_found": "Product not found",
+    "back_to_home": "Back to Home",
+    "reviews": "reviews",
+    "in_stock": "In stock",
+    "description": "Description",
+    "specifications": "Specifications",
+    "add_to_cart": "Add to Cart",
+    "free_shipping": "Free shipping on orders over $50",
+    "warranty": "2-year warranty on all products",
+    "secure_payment": "Secure payment with SSL encryption",
+    "product_description": "Product Description",
+    "quantity": "Quantity"
+  }
+}
