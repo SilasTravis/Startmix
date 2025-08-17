@@ -13,35 +13,7 @@ const Footer: React.FC = () => {
             <h2 className="text-2xl font-bold mb-4 bg-white px-2">
               <img src="/logo.png" alt="" />
             </h2>
-            <div>
-              <ul className="mt-4 space-y-2">
-                <li>
-                  <a href="#" className="hover:underline">
-                    {t("footer.about.who_we_are")}
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    {t("footer.about.what_we_do")}
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    {t("footer.about.our_history")}
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    {t("footer.about.address_book")}
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    {t("footer.about.suppliers")}
-                  </a>
-                </li>
-              </ul>
-            </div>
+
             {/* Language selector can be added here */}
           </div>
 
