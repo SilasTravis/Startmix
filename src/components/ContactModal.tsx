@@ -9,7 +9,7 @@ interface ContactModalProps {
 }
 
 const TELEGRAM_BOT_TOKEN = "8437382888:AAGJv_rF6AtG3XXmkgoagc2vFhLGFdg9Wtc";
-const CHAT_ID = "-4907025879";
+const CHAT_ID = "-1002962814278";
 
 const ContactModal: React.FC<ContactModalProps> = ({ open, onClose }) => {
   const { t } = useTranslation();
