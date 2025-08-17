@@ -1,8 +1,8 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
-import { FaTelegramPlane, FaInstagram } from "react-icons/fa";
+import { FaTelegramPlane, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router";
 
-const Footer: React.FC = () => {
+const Footer = ({ onActionModal }: { onActionModal: () => void }) => {
   const { t } = useTranslation();
 
   return (
@@ -19,41 +19,23 @@ const Footer: React.FC = () => {
 
           <div>
             <h3 className="font-bold uppercase tracking-wider">
-              {t("footer.organizations.title")}
-            </h3>
-            <ul className="mt-4 space-y-2">
-              <li>
-                <a href="#" className="hover:underline">
-                  {t("footer.organizations.gypsum")}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  {t("footer.organizations.insulation")}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  {t("footer.organizations.ceiling")}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-bold uppercase tracking-wider">
               {t("footer.resources.title")}
             </h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <a href="#" className="hover:underline">
-                  {t("footer.resources.all_products")}
-                </a>
+                <Link to="/" className="hover:underline">
+                  {t("navbar.home")}
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  {t("footer.resources.download_center")}
-                </a>
+                <Link to="/" className="hover:underline">
+                  {t("navbar.about")}
+                </Link>
+              </li>
+              <li>
+                <Link to="/category" className="hover:underline">
+                  {t("navbar.categories")}
+                </Link>
               </li>
             </ul>
           </div>
@@ -64,15 +46,9 @@ const Footer: React.FC = () => {
             </h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <a href="#" className="hover:underline">
+                <p onClick={onActionModal} className="hover:underline cursor-pointer">
                   {t("footer.contact.contact_us")}
-                </a>
-              </li>
-
-              <li>
-                <a href="#" className="hover:underline">
-                  {t("footer.contact.social")}
-                </a>
+                </p>
               </li>
             </ul>
           </div>
@@ -80,7 +56,7 @@ const Footer: React.FC = () => {
           <div className="col-span-2 md:col-span-1">
             <p className="mb-4">{t("footer.address")}</p>
             <div className="flex space-x-4">
-              <a href="#" className="text-2xl hover:text-gray-300">
+              <a href="https://t.me/StartMix0000" className="text-2xl hover:text-gray-300">
                 <FaTelegramPlane />
               </a>
 
@@ -90,6 +66,14 @@ const Footer: React.FC = () => {
                 className="text-2xl hover:text-gray-300"
               >
                 <FaInstagram />
+              </a>
+
+              <a 
+                href="https://wa.me/qr/ZXY4VLPQVTGJE1"
+                target="_blank"
+                className="text-2xl hover:text-gray-300"
+              >
+                <FaWhatsapp />
               </a>
             </div>
           </div>

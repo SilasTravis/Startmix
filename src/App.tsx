@@ -35,7 +35,7 @@ function App() {
               />
             </Routes>
           </main>
-          <Footer />
+          <Footer onActionModal={() => setActionModal(true)} />
         </div>
       </Router>
       <ContactModal open={actionModal} onClose={() => setActionModal(false)} />

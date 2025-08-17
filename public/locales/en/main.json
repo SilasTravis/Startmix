@@ -26,8 +26,8 @@
     "close": "Close"
   },
   "hero": {
-    "title": "BUILD ON US.",
-    "subtitle": "We combine all our experience in one place to create convenience for you. With a reliable and practical approach, our new platform provides easy access to leading solutions and inspires you to succeed in any field.",
+    "title": "Quality and reliability — the guarantee of StartMix",
+    "subtitle": "Since 2017, we have been producing reliable, high-quality, and modern construction products. Throughout our 8 years of operation, we have been serving more than 100 regular clients. The total number of our clients exceeds 1,000.",
     "button1": "Contact Us",
     "button2": "Search our documents",
     "catalog": {
@@ -35,29 +35,29 @@
     }
   },
   "catalog": {
-    "title": "Catalogs"
+    "title": "Catalog"
   },
   "brands": {
     "title": "Brands"
   },
   "experience": {
-    "title": "Diverse Applications, Limitless Experience",
-    "text": "At Knauf, our innovations begin with understanding your needs. With advanced know-how and creativity, we develop game-changing solutions that exceed industry standards. Pushing the boundaries of what's possible, we offer a wide range of materials suitable for every aspect of your project - from floors and ceilings to walls, roofs, and facades. Our skilled teams ensure the highest level of performance in fire resistance, energy efficiency, sustainability, and more - enabling you to achieve any goal."
+    "title": "A Reliable Partner in Construction",
+    "text": "Start Mix embodies reliability and a modern approach in the production of construction materials. In each of our products, you can see the harmony of quality, durability, and advanced technologies. Our team consists of dedicated professionals who develop convenient materials for various stages of construction. Start Mix is not just a manufacturing plant, but a symbol of sustainable development and trustworthy partnership in construction."
   },
   "sustainability": {
-    "title": "Creating Sustainable Homes for Tomorrow",
-    "text": "The family- and globally-managed Knauf Group is a leading supplier of reliable building materials that simplifies every stage of construction, offering comprehensive solutions and ensuring quality assurance. Our well-known brands are present in more than 90 countries, with 80 raw material processing plants and 300 production sites. Under the leadership of Alexander Knauf, Jörg Kampmeyer, and Dr. Uwe Knotzer, we continue to expand our sustainable product portfolio, implemented by over 40,000 dedicated employees worldwide."
+    "title": "Innovative Construction Materials for Every Stage",
+    "text": "Our company operates as a reliable partner in the field of construction materials, offering high-quality solutions that simplify every stage of the building process. Managed on a global scale, our enterprise ensures sustainable development with a wide product portfolio and provides innovative technologies tailored to customer needs. With the support of experienced leadership and dedicated employees, we continue to grow based not only on quality but also on the principles of reliability and stability."
   },
   "future": {
-    "title": "Building the Future",
-    "subtitle": "Based on 90 years of experience in the production of building materials, we respond to modern construction challenges with innovative products, reliable partnership, and global presence."
+    "title": "Quality and reliability — the guarantee of Start Mix",
+    "subtitle": "We offer modern and reliable solutions in the production of construction materials with a guarantee of quality. For our partners, we provide convenient and high-quality offers."
   },
   "technical": {
-    "title": "Simplifying Complex Technical Information",
-    "text": "At any stage of the construction process, we aim to reduce your technical complexities and give you the confidence to build. To support you, we make our premium solutions easy to understand, select, and install. Our resource assortment includes product information packages, fire safety documents, modern test certificates, and digital tools for easy selection of the right materials."
+    "title": "Solutions for Saving Time and Achieving High Results",
+    "text": "Start Mix aims to create trust and convenience for customers during the construction process. Our main priority is to simplify the selection and use of quality materials as much as possible. That’s why our company provides not only durable and modern materials, but also additional resources such as technical instructions, safety documents, and digital support tools. All of this helps you save time, manage resources efficiently, and achieve superior results."
   },
   "cta": {
-    "title": "By ordering cement from the manufacturer, you protect yourself from counterfeits and are guaranteed to receive a high-quality product!",
+    "title": "Purchasing from an official supplier protects you from counterfeit products and ensures long-lasting results.",
     "button": "Choose Products"
   },
   "footer": {
@@ -86,7 +86,7 @@
       "career": "Global Career",
       "social": "Social Channels"
     },
-    "address": "Tashkent city, Almazar district, street, Sebzor, 22A"
+    "address": "Tashkent region, Zangiota district, Gulchilik street"
   },
   "contactModal": {
     "title": "Become a client",
