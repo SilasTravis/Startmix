@@ -124,6 +124,7 @@ const Navbar = () => {
         </Box>
         <Stack direction={"row"}>
           <Button
+            className="!hidden lg:!block"
             variant="contained"
             onClick={handleOpenContactModal}
             sx={{
@@ -169,27 +170,6 @@ const Navbar = () => {
 
         {/* Mobile menu button */}
         <Box sx={{ display: { xs: "flex", md: "none" }, alignItems: "center" }}>
-          <FormControl
-            size="small"
-            variant="outlined"
-            sx={{ minWidth: 100, mr: 1 }}
-          >
-            <Select
-              value={i18n.language}
-              onChange={handleLanguageChange}
-              displayEmpty
-              size="small"
-              sx={{
-                "& .MuiOutlinedInput-notchedOutline": {
-                  border: "none",
-                },
-              }}
-            >
-              <MenuItem value="en">{t("language.en")}</MenuItem>
-              <MenuItem value="ru">{t("language.ru")}</MenuItem>
-              <MenuItem value="uz">{t("language.uz")}</MenuItem>
-            </Select>
-          </FormControl>
           <IconButton
             edge="end"
             color="inherit"
@@ -208,7 +188,7 @@ const Navbar = () => {
         open={isMenuOpen && isMobile}
         onClose={toggleMenu}
         anchorOrigin={{
-          vertical: "top",
+          vertical: 60,
           horizontal: "right",
         }}
         transformOrigin={{
@@ -217,7 +197,7 @@ const Navbar = () => {
         }}
         PaperProps={{
           style: {
-            width: "100%",
+            width: "100vw",
             maxWidth: "100%",
             margin: 0,
             top: "64px !important",
@@ -249,6 +229,34 @@ const Navbar = () => {
             </Typography>
           </MenuItem>
         ))}
+        <MenuItem
+          onClick={() => {
+            toggleMenu();
+          }}
+          sx={{
+            py: 2,
+            borderBottom: `1px solid ${theme.palette.divider}`,
+            "&:last-child": {
+              borderBottom: "none",
+            },
+          }}
+        >
+          <Button
+            variant="contained"
+            className="!mx-auto"
+            onClick={handleOpenContactModal}
+            sx={{
+              backgroundColor: "black",
+              color: "#fff",
+
+              "&:hover": {
+                backgroundColor: theme.palette.primary.dark,
+              },
+            }}
+          >
+            {t("navbar.connect")}
+          </Button>
+        </MenuItem>
       </Menu>
 
       {/* Contact Modal */}

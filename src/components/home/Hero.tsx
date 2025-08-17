@@ -8,11 +8,11 @@ const Hero = () => {
   return (
     <section className="relative flex items-center justify-center min-h-[600px] overflow-hidden text-white text-center md:text-left">
       <div
-        className="absolute top-0 left-0 w-2/3 h-full bg-[#0073b1] -skew-x-6 origin-top-left"
+        className="absolute top-0 left-0 lg:w-2/3 w-full h-full bg-[#0073b1] lg:-skew-x-6 origin-top-left"
         style={{ zIndex: 1 }}
       >
         <div
-          className="absolute top-0 right-0 hidden w-full h-[120%] bg-cover bg-center opacity-10 origin-top-right md:block"
+          className="absolute top-0 right-0 w-full h-[120%] bg-cover bg-center opacity-10 origin-top-right md:block"
           style={{ backgroundImage: "url(/images/header-shape.jpg)" }}
         ></div>
       </div>
