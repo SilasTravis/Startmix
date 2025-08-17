@@ -17,15 +17,21 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "ru",
+    fallbackLng: "ru", // default when nothing detected
+    supportedLngs: ["en", "ru", "uz"],
     debug: false,
-    interpolation: {
-      escapeValue: false,
-    },
+    interpolation: { escapeValue: false },
+
+    // DO NOT set `lng` here; it overrides detection.
+
     detection: {
-      order: ["localStorage", "navigator"],
+      order: ["localStorage", "navigator", "htmlTag"],
       caches: ["localStorage"],
+      // If you use a custom key, uncomment:
+      // lookupLocalStorage: "myAppLng",
     },
+
+    initImmediate: false,
   });
 
 export default i18n;
