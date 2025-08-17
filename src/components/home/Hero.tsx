@@ -34,9 +34,9 @@ const Hero = ({ onActionModal }: { onActionModal: () => void }) => {
                 onClick={onActionModal}
                 variant="contained"
                 size="large"
+                className="!text-red-700 !font-bold"
                 sx={{
                   bgcolor: "white",
-                  color: "primary.main",
                   "&:hover": { bgcolor: "#f0f0f0" },
                   px: 4,
                   py: 1.5,
