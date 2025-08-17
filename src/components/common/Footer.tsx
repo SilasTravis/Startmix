@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-[#003369] text-white">
+    <footer className="bg-[#373737] text-white">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-sm">
           <div className="col-span-2 md:col-span-1">

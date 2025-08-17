@@ -7,11 +7,11 @@ const Hero = ({ onActionModal }: { onActionModal: () => void }) => {
   return (
     <section className="relative flex items-center justify-center min-h-[600px] overflow-hidden text-white text-center md:text-left">
       <div
-        className="absolute top-0 left-0 lg:w-2/3 w-full h-full bg-[#0073b1] lg:-skew-x-6 origin-top-left"
+        className="absolute top-0 left-0 lg:w-full w-full h-full bg-black origin-top-left"
         style={{ zIndex: 1 }}
       >
         <div
-          className="absolute top-0 right-0 w-full h-[120%] bg-cover bg-center opacity-10 origin-top-right md:block"
+          className="absolute top-0 right-0 w-full h-[120%] bg-cover bg-center opacity-20 origin-top-right md:block"
           style={{ backgroundImage: "url(/images/header-shape.jpg)" }}
         ></div>
       </div>
@@ -20,9 +20,9 @@ const Hero = ({ onActionModal }: { onActionModal: () => void }) => {
         style={{ backgroundImage: "url(/images/header.jpg)" }}
       ></div>
 
-      <div className="relative z-10 max-w-7xl px-8 mx-auto w-full">
+      <div className="relative z-10 max-w-7xl text-center px-8 mx-auto w-full">
         <div className="flex items-center flex-col">
-          <div className="w-full md:pr-8">
+          <div className="w-full flex flex-col items-center md:pr-8">
             <h1 className="text-4xl poppins-bold-italic lg:text-5xl italic font-bold uppercase mb-6">
               {t("hero.title")}
             </h1>
