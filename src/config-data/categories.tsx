@@ -8,29 +8,39 @@ import PlumbingIcon from "../components/icons/PlumbingIcon";
 import PowerIcon from "../components/icons/PowerIcon";
 import ToolIcon from "../components/icons/ToolIcon";
 
+// Helper function to get image URL
+const getImageUrl = (path: string) => {
+  // In development, use the full path from public directory
+  if (import.meta.env.DEV) {
+    return path;
+  }
+  // In production, use the base URL
+  return path.startsWith('/') ? path : `/${path}`;
+};
+
 // Product images
-const img11 = "/images/products/1-1.jpg";
-const img12 = "/images/products/1-2.png";
-const img13 = "/images/products/1-3.jpg";
-const img21 = "/images/products/2-1.jpg";
-const img22 = "/images/products/2-2.jpg";
-const img31 = "/images/products/3-1.jpg";
-const img32 = "/images/products/3-2.jpg";
-const img33 = "/images/products/3-3.jpg";
-const img41 = "/images/products/4-1.jpg";
-const img42 = "/images/products/4-2.jpg";
-const img43 = "/images/products/4-3.jpg";
-const img51 = "/images/products/5-1.jpg";
-const img61 = "/images/products/6-1.jpg";
-const img62 = "/images/products/6-2.jpg";
+const img11 = getImageUrl("images/products/1-1.jpg");
+const img12 = getImageUrl("images/products/1-2.png");
+const img13 = getImageUrl("images/products/1-3.jpg");
+const img21 = getImageUrl("images/products/2-1.jpg");
+const img22 = getImageUrl("images/products/2-2.jpg");
+const img31 = getImageUrl("images/products/3-1.jpg");
+const img32 = getImageUrl("images/products/3-2.jpg");
+const img33 = getImageUrl("images/products/3-3.jpg");
+const img41 = getImageUrl("images/products/4-1.jpg");
+const img42 = getImageUrl("images/products/4-2.jpg");
+const img43 = getImageUrl("images/products/4-3.jpg");
+const img51 = getImageUrl("images/products/5-1.jpg");
+const img61 = getImageUrl("images/products/6-1.jpg");
+const img62 = getImageUrl("images/products/6-2.jpg");
 
 // Category images
-const primersImg = "/images/categories/primers.jpg";
-const kleyImg = "/images/categories/kley.jpg";
-const suvoqImg = "/images/categories/suvoq.jpg";
-const assesuarsImg = "/images/categories/assesuars.jpg";
-const cleanImg = "/images/categories/clean.jpg";
-const pardozImg = "/images/categories/pardoz.jpg";
+const primersImg = getImageUrl("images/categories/primers.jpg");
+const kleyImg = getImageUrl("images/categories/kley.jpg");
+const suvoqImg = getImageUrl("images/categories/suvoq.jpg");
+const assesuarsImg = getImageUrl("images/categories/assesuars.jpg");
+const cleanImg = getImageUrl("images/categories/clean.jpg");
+const pardozImg = getImageUrl("images/categories/pardoz.jpg");
 
 // Interfaces for our data structure
 export interface Product {
