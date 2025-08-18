@@ -8,20 +8,29 @@ import PlumbingIcon from "../components/icons/PlumbingIcon";
 import PowerIcon from "../components/icons/PowerIcon";
 import ToolIcon from "../components/icons/ToolIcon";
 
-import img11 from "../../public/images/products/1-1.jpg";
-import img12 from "../../public/images/products/1-2.png";
-import img13 from "../../public/images/products/1-3.jpg";
-import img21 from "../../public/images/products/2-1.jpg";
-import img22 from "../../public/images/products/2-2.jpg";
-import img31 from "../../public/images/products/3-1.jpg";
-import img32 from "../../public/images/products/3-2.jpg";
-import img33 from "../../public/images/products/3-3.jpg";
-import img41 from "../../public/images/products/4-1.jpg";
-import img42 from "../../public/images/products/4-2.jpg";
-import img43 from "../../public/images/products/4-3.jpg";
-import img51 from "../../public/images/products/5-1.jpg";
-import img61 from "../../public/images/products/6-1.jpg";
-import img62 from "../../public/images/products/6-2.jpg";
+// Product images
+const img11 = "/images/products/1-1.jpg";
+const img12 = "/images/products/1-2.png";
+const img13 = "/images/products/1-3.jpg";
+const img21 = "/images/products/2-1.jpg";
+const img22 = "/images/products/2-2.jpg";
+const img31 = "/images/products/3-1.jpg";
+const img32 = "/images/products/3-2.jpg";
+const img33 = "/images/products/3-3.jpg";
+const img41 = "/images/products/4-1.jpg";
+const img42 = "/images/products/4-2.jpg";
+const img43 = "/images/products/4-3.jpg";
+const img51 = "/images/products/5-1.jpg";
+const img61 = "/images/products/6-1.jpg";
+const img62 = "/images/products/6-2.jpg";
+
+// Category images
+const primersImg = "/images/categories/primers.jpg";
+const kleyImg = "/images/categories/kley.jpg";
+const suvoqImg = "/images/categories/suvoq.jpg";
+const assesuarsImg = "/images/categories/assesuars.jpg";
+const cleanImg = "/images/categories/clean.jpg";
+const pardozImg = "/images/categories/pardoz.jpg";
 
 // Interfaces for our data structure
 export interface Product {
@@ -115,7 +124,7 @@ export const categories: Category[] = [
       ru: "Грунтовки и подготовительные материалы",
       uz: "Gruntovkalar",
     },
-    image: "/images/categories/primers.jpg",
+    image: primersImg,
     icon: <ElectricityIcon className="w-8 h-8" />,
     products: [
       {
@@ -177,7 +186,7 @@ export const categories: Category[] = [
       ru: "Клеи и связующие",
       uz: "Yelimlar va bog‘lovchi moddalar",
     },
-    image: "/images/categories/kley.jpg",
+    image: kleyImg,
     icon: <ToolIcon className="w-8 h-8" />,
     products: [
       {
@@ -264,7 +273,7 @@ export const categories: Category[] = [
       ru: "Штукатурные и выравнивающие смеси",
       uz: "Suvog‘ va tekislash aralashmalari",
     },
-    image: "/images/categories/suvoq.jpg",
+    image: suvoqImg,
     icon: <HandToolIcon className="w-8 h-8" />,
     products: [
       {
@@ -351,7 +360,7 @@ export const categories: Category[] = [
       ru: "Отделочные смеси",
       uz: "Yakuniy pardozlash aralashmalari",
     },
-    image: "/images/categories/pardoz.jpg",
+    image: pardozImg,
     icon: <PlumbingIcon className="w-8 h-8" />,
     products: [
       {
@@ -438,7 +447,7 @@ export const categories: Category[] = [
       ru: "Аксессуары и инструменты",
       uz: "Aksessuarlar va asboblar",
     },
-    image: "/images/categories/assesuars.jpg",
+    image: assesuarsImg,
     icon: <GardenIcon className="w-8 h-8" />,
     products: [
       {
@@ -475,7 +484,7 @@ export const categories: Category[] = [
       ru: "Бытовая химия и уборка",
       uz: "Maishiy kimyo va tozalash vositalari",
     },
-    image: "/images/categories/clean.jpg",
+    image: cleanImg,
     icon: <PowerIcon className="w-8 h-8" />,
     products: [
       {
