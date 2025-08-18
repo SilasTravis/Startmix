@@ -148,7 +148,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ open, onClose }) => {
           </a>
           <a
             href="tel:+998 98 809 40 44"
-            className="flex-1 bg-[#00A75A] text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-2 hover:bg-green-600 transition-colors"
+            className="flex-1 bg-[#00A75A] whitespace-nowrap text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-2 hover:bg-green-600 transition-colors"
           >
             <FaPhone />
             {t("contactModal.phone_button")}
