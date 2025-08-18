@@ -14,11 +14,11 @@ const CallToAction: React.FC<CallToActionProps> = ({
   onActionModal,
 }) => {
   return (
-    <div className="bg-[#373737] text-white">
+    <div className="bg-[#373737] text-white lg:py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6">
-            <h2 className="text-4xl font-bold leading-snug">{title}</h2>
+            <h2 className="lg:text-4xl text-2xl font-bold leading-snug">{title}</h2>
             <button
               onClick={onActionModal}
               className="bg-[#EE3431] hover:bg-red-600 text-white font-bold py-4 px-10 uppercase tracking-wider transition-colors duration-300"
@@ -30,7 +30,7 @@ const CallToAction: React.FC<CallToActionProps> = ({
             <img
               src={imageUrl}
               alt="Product Image"
-              className="max-w-md w-full"
+              className="max-w-xl lg:scale-[1.3] w-full"
             />
           </div>
         </div>
