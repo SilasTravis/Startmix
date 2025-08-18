@@ -10,7 +10,6 @@ const Home = ({ onActionModal }: { onActionModal: () => void }) => {
 
   return (
     <>
-      ``
       <Hero onActionModal={onActionModal} />
       <CatalogSlider />
       {/* <BrandSlider /> */}
