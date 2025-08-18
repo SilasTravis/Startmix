@@ -36,7 +36,7 @@ const img62 = getImageUrl("images/products/6-2.jpg");
 const primersImg = getImageUrl("images/categories/primers.jpg");
 const kleyImg = getImageUrl("images/categories/kley.jpg");
 const suvoqImg = getImageUrl("images/categories/suvoq.jpg");
-const assesuarsImg = getImageUrl("images/categories/clean.jpg");
+const assesuarsImg = getImageUrl("images/categories/assesuar.jpg");
 const cleanImg = getImageUrl("images/categories/clean.jpg");
 const pardozImg = getImageUrl("images/categories/pardoz.jpg");
 
