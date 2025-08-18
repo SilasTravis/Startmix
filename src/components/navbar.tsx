@@ -52,9 +52,8 @@ const Navbar = ({ onActionModal }: { onActionModal: () => void }) => {
 
   const navItems = [
     { path: "/", label: t("navbar.home") },
-    { path: "/", label: t("navbar.about") },
+    { path: "#about-us-section", label: t("navbar.about") },
     { path: "/category", label: t("navbar.categories") },
-    { path: "/", label: t("navbar.contact") },
   ];
 
   return (

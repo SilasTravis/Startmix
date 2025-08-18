@@ -1,16 +1,28 @@
 import React from "react";
 
 // Import all icon components
-import AutoIcon from "../components/icons/AutoIcon";
-import ConsumablesIcon from "../components/icons/ConsumablesIcon";
 import ElectricityIcon from "../components/icons/ElectricityIcon";
-import FastenerIcon from "../components/icons/FastenerIcon";
 import GardenIcon from "../components/icons/GardenIcon";
 import HandToolIcon from "../components/icons/HandToolIcon";
 import PlumbingIcon from "../components/icons/PlumbingIcon";
 import PowerIcon from "../components/icons/PowerIcon";
 import ToolIcon from "../components/icons/ToolIcon";
-import WorkwearIcon from "../components/icons/WorkwearIcon";
+
+import img11 from "../../public/images/products/1-1.jpg";
+import img12 from "../../public/images/products/1-2.png";
+import img13 from "../../public/images/products/1-3.jpg";
+import img21 from "../../public/images/products/2-1.jpg";
+import img22 from "../../public/images/products/2-2.jpg";
+import img31 from "../../public/images/products/3-1.jpg";
+import img32 from "../../public/images/products/3-2.jpg";
+import img33 from "../../public/images/products/3-3.jpg";
+import img41 from "../../public/images/products/4-1.jpg";
+import img42 from "../../public/images/products/4-2.jpg";
+import img43 from "../../public/images/products/4-3.jpg";
+import img51 from "../../public/images/products/5-1.jpg";
+import img61 from "../../public/images/products/6-1.jpg";
+import img62 from "../../public/images/products/6-2.jpg";
+
 
 // Interfaces for our data structure
 export interface Product {
@@ -49,180 +61,464 @@ export interface Category {
 }
 
 // Helper function to generate mock products
-const generateProducts = (
-  categoryId: number,
-  categoryName: { en: string; ru: string; uz: string },
-  count: number
-): Product[] => {
-  const products: Product[] = [];
-  for (let i = 1; i <= count; i++) {
-    products.push({
-      id: categoryId * 100 + i,
-      name: {
-        en: `${categoryName.en} Product ${i}`,
-        ru: `${categoryName.ru}, продукт ${i}`,
-        uz: `${categoryName.uz} mahsuloti ${i}`,
-      },
-      description: {
-        en: `This is a detailed description for ${categoryName.en} Product ${i}. It highlights key features, benefits, and specifications.`,
-        ru: `Это подробное описание для продукта ${categoryName.ru} ${i}. В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
-        uz: `Bu ${categoryName.uz} mahsuloti ${i} uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
-      },
-      mainImage: [
-        "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "https://images.pexels.com/photos/6473973/pexels-photo-6473973.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "https://images.pexels.com/photos/8487376/pexels-photo-8487376.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "https://images.pexels.com/photos/7492879/pexels-photo-7492879.jpeg?auto=compress&cs=tinysrgb&w=600",
-      ][Math.floor(Math.random() * 4)],
-      gallery: [
-        "https://images.pexels.com/photos/6473973/pexels-photo-6473973.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "https://images.pexels.com/photos/7492879/pexels-photo-7492879.jpeg?auto=compress&cs=tinysrgb&w=600",
-        "https://images.pexels.com/photos/8487376/pexels-photo-8487376.jpeg?auto=compress&cs=tinysrgb&w=600",
-      ],
-      brand: {
-        name: "BrandName",
-        icon: `https://via.placeholder.com/100x40.png?text=Brand`,
-      },
-      characteristics: {
-        Weight: `${i * 1.2} kg`,
-        Dimensions: `${i * 10}x${i * 5}x${i * 2} cm`,
-        Material: "High-Quality Steel",
-        Warranty: "2 years",
-      },
-    });
-  }
-  return products;
-};
+// const generateProducts = (
+//   categoryId: number,
+//   categoryName: { en: string; ru: string; uz: string },
+//   count: number
+// ): Product[] => {
+//   const products: Product[] = [];
+//   for (let i = 1; i <= count; i++) {
+//     products.push({
+//       id: categoryId * 100 + i,
+//       name: {
+//         en: `${categoryName.en} Product ${i}`,
+//         ru: `${categoryName.ru}, продукт ${i}`,
+//         uz: `${categoryName.uz} mahsuloti ${i}`,
+//       },
+//       description: {
+//         en: `This is a detailed description for ${categoryName.en} Product ${i}. It highlights key features, benefits, and specifications.`,
+//         ru: `Это подробное описание для продукта ${categoryName.ru} ${i}. В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
+//         uz: `Bu ${categoryName.uz} mahsuloti ${i} uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
+//       },
+//       mainImage: [
+//         "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=600",
+//         "https://images.pexels.com/photos/6473973/pexels-photo-6473973.jpeg?auto=compress&cs=tinysrgb&w=600",
+//         "https://images.pexels.com/photos/8487376/pexels-photo-8487376.jpeg?auto=compress&cs=tinysrgb&w=600",
+//         "https://images.pexels.com/photos/7492879/pexels-photo-7492879.jpeg?auto=compress&cs=tinysrgb&w=600",
+//       ][Math.floor(Math.random() * 4)],
+//       gallery: [
+//         "https://images.pexels.com/photos/6473973/pexels-photo-6473973.jpeg?auto=compress&cs=tinysrgb&w=600",
+//         "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=600",
+//         "https://images.pexels.com/photos/7492879/pexels-photo-7492879.jpeg?auto=compress&cs=tinysrgb&w=600",
+//         "https://images.pexels.com/photos/8487376/pexels-photo-8487376.jpeg?auto=compress&cs=tinysrgb&w=600",
+//       ],
+//       brand: {
+//         name: "BrandName",
+//         icon: `https://via.placeholder.com/100x40.png?text=Brand`,
+//       },
+//       characteristics: {
+//         Weight: `${i * 1.2} kg`,
+//         Dimensions: `${i * 10}x${i * 5}x${i * 2} cm`,
+//         Material: "High-Quality Steel",
+//         Warranty: "2 years",
+//       },
+//     });
+//   }
+//   return products;
+// };
 
 // Category data array
 export const categories: Category[] = [
   {
     id: 1,
-    name: { en: "Tools", ru: "Инструмент", uz: "Asboblar" },
+    name: { en: "Adhesives & Binders", ru: "Клеи и связующие", uz: "Yelimlar va bog‘lovchi moddalar" },
     image:
       "https://images.pexels.com/photos/4312855/pexels-photo-4312855.jpeg?auto=compress&cs=tinysrgb&w=600",
     icon: <ToolIcon className="w-8 h-8" />,
-    products: generateProducts(
-      1,
-      { en: "Mustahkam beton aralashmasi", ru: "Прочный бетонный раствор", uz: "Durable concrete mix" },
-      12
-    ),
+    products: [
+      {
+        id: 1,
+        name: {
+          en: `Tile adhesive`,
+          ru: `Клей для плитки`,
+          uz: `Kafel yelimi`,
+        },
+        description: {
+          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
+          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
+          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
+        },
+        mainImage: img11,
+        gallery: [],
+        brand: {
+          name: "BrandName",
+          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
+        },
+        characteristics: {
+          Weight: ` kg`,
+          Dimensions: `cm`,
+          Material: "High-Quality Steel",
+          Warranty: "2 years",
+        },
+      },
+      {
+        id: 2,
+        name: {
+          en: `PVA glue`,
+          ru: `Клей ПВА`,
+          uz: `PVA yelimi`,
+        },
+        description: {
+          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
+          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
+          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
+        },
+        mainImage: img12,
+        gallery: [],
+        brand: {
+          name: "BrandName",
+          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
+        },
+        characteristics: {
+          Weight: ` kg`,
+          Dimensions: `cm`,
+          Material: "High-Quality Steel",
+          Warranty: "2 years",
+        },
+      },
+      {
+        id: 3,
+        name: {
+          en: `Mosaic adhesive`,
+          ru: `Клей для мозаики`,
+          uz: `Mozaika yelimi`,
+        },
+        description: {
+          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
+          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
+          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
+        },
+        mainImage: img13,
+        gallery: [],
+        brand: {
+          name: "BrandName",
+          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
+        },
+        characteristics: {
+          Weight: ` kg`,
+          Dimensions: `cm`,
+          Material: "High-Quality Steel",
+          Warranty: "2 years",
+        },
+      },
+    ],
   },
   {
     id: 2,
     name: {
-      en: "Electricity and Light",
-      ru: "Электрика и свет",
-      uz: "Elektr va yorug'lik",
+      en: "Primers & Preparatory Materials",
+      ru: "Грунтовки и подготовительные материалы",
+      uz: "Gruntovkalar",
     },
     image:
       "https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg?auto=compress&cs=tinysrgb&w=600",
     icon: <ElectricityIcon className="w-8 h-8" />,
-    products: generateProducts(
-      2,
-      { en: "Modern ceiling panels", ru: "Современные потолочные панели", uz: "Zamonaviy shift panellari" },
-      15
-    ),
+    products: [
+      {
+        id: 1,
+        name: {
+          en: `Primer`,
+          ru: `Грунтовка`,
+          uz: `Gruntovka`,
+        },
+        description: {
+          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
+          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
+          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
+        },
+        mainImage: img21,
+        gallery: [],
+        brand: {
+          name: "BrandName",
+          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
+        },
+        characteristics: {
+          Weight: ` kg`,
+          Dimensions: `cm`,
+          Material: "High-Quality Steel",
+          Warranty: "2 years",
+        },
+      },
+      {
+        id: 2,
+        name: {
+          en: `Concrete contact`,
+          ru: `Бетоноконтакт`,
+          uz: `Betonokontakt`,
+        },
+        description: {
+          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
+          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
+          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
+        },
+        mainImage: img22,
+        gallery: [],
+        brand: {
+          name: "BrandName",
+          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
+        },
+        characteristics: {
+          Weight: ` kg`,
+          Dimensions: `cm`,
+          Material: "High-Quality Steel",
+          Warranty: "2 years",
+        },
+      },
+    ],
   },
   {
     id: 3,
-    name: { en: "Hand Tools", ru: "Ручной инструмент", uz: "Qo'l asboblari" },
+    name: { en: "Plastering & Leveling", ru: "Штукатурные и выравнивающие смеси", uz: "Suvog‘ va tekislash aralashmalari" },
     image:
       "https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=600",
     icon: <HandToolIcon className="w-8 h-8" />,
-    products: generateProducts(
-      3,
-      { en: "Thermal insulation brick", ru: "Теплоизоляционный кирпич", uz: "Issiqlikni saqlovchi g‘isht" },
-      10
-    ),
+    products: [
+      {
+        id: 1,
+        name: {
+          en: `Start band / Rodban (Base plaster)`,
+          ru: `Старт-бэнд / Родбанд (базовая штукатурка)`,
+          uz: `Start band / Rodban (asosiy suvoq)`,
+        },
+        description: {
+          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
+          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
+          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
+        },
+        mainImage: img31,
+        gallery: [],
+        brand: {
+          name: "BrandName",
+          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
+        },
+        characteristics: {
+          Weight: ` kg`,
+          Dimensions: `cm`,
+          Material: "High-Quality Steel",
+          Warranty: "2 years",
+        },
+      },
+      {
+        id: 2,
+        name: {
+          en: `Putty / Filler`,
+          ru: `Шпаклёвка`,
+          uz: `Shpaklyovka`,
+        },
+        description: {
+          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
+          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
+          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
+        },
+        mainImage: img32,
+        gallery: [],
+        brand: {
+          name: "BrandName",
+          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
+        },
+        characteristics: {
+          Weight: ` kg`,
+          Dimensions: `cm`,
+          Material: "High-Quality Steel",
+          Warranty: "2 years",
+        },
+      },
+      {
+        id: 3,
+        name: {
+          en: `Self-leveling floor compound`,
+          ru: `Наливной пол`,
+          uz: `Nalyvnoy pol (o‘z-o‘zidan tekislanadigan pol aralashmasi)`,
+        },
+        description: {
+          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
+          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
+          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
+        },
+        mainImage: img33,
+        gallery: [],
+        brand: {
+          name: "BrandName",
+          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
+        },
+        characteristics: {
+          Weight: ` kg`,
+          Dimensions: `cm`,
+          Material: "High-Quality Steel",
+          Warranty: "2 years",
+        },
+      },
+    ],
   },
   {
     id: 4,
-    name: { en: "Plumbing", ru: "Сантехника", uz: "Santexnika" },
+    name: { en: "Finishing Compounds", ru: "Отделочные смеси", uz: "Yakuniy pardozlash aralashmalari" },
     image:
       "https://images.pexels.com/photos/372796/pexels-photo-372796.jpeg?auto=compress&cs=tinysrgb&w=600",
     icon: <PlumbingIcon className="w-8 h-8" />,
-    products: generateProducts(
-      4,
-      { en: "Moisture resistant paint", ru: "Влагостойкая краска", uz: "Namlikka chidamli bo‘yoq" },
-      18
-    ),
+    products: [
+      {
+        id: 1,
+        name: {
+          en: `Paint / Emulsion`,
+          ru: `Краска / Эмульсия`,
+          uz: `Bo‘yoq / Emulsiya`,
+        },
+        description: {
+          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
+          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
+          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
+        },
+        mainImage: img41,
+        gallery: [],
+        brand: {
+          name: "BrandName",
+          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
+        },
+        characteristics: {
+          Weight: ` kg`,
+          Dimensions: `cm`,
+          Material: "High-Quality Steel",
+          Warranty: "2 years",
+        },
+      },
+      {
+        id: 2,
+        name: {
+          en: `Tile grout`,
+          ru: `Затирка для плитки`,
+          uz: `Kafel orasini to‘ldiruvchi (fuga)`,
+        },
+        description: {
+          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
+          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
+          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
+        },
+        mainImage: img42,
+        gallery: [],
+        brand: {
+          name: "BrandName",
+          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
+        },
+        characteristics: {
+          Weight: ` kg`,
+          Dimensions: `cm`,
+          Material: "High-Quality Steel",
+          Warranty: "2 years",
+        },
+      },
+      {
+        id: 3,
+        name: {
+          en: `Waterproofing materials`,
+          ru: `Гидроизоляционные материалы`,
+          uz: `Gidroizolyatsiya materiallari`,
+        },
+        description: {
+          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
+          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
+          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
+        },
+        mainImage: img43,
+        gallery: [],
+        brand: {
+          name: "BrandName",
+          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
+        },
+        characteristics: {
+          Weight: ` kg`,
+          Dimensions: `cm`,
+          Material: "High-Quality Steel",
+          Warranty: "2 years",
+        },
+      },
+    ],
   },
   {
     id: 5,
-    name: { en: "Garden", ru: "Всё для сада", uz: "Bog' uchun" },
+    name: { en: "Accessories & Tools", ru: "Аксессуары и инструменты", uz: "Aksessuarlar va asboblar" },
     image:
       "https://images.pexels.com/photos/127944/pexels-photo-127944.jpeg?auto=compress&cs=tinysrgb&w=600",
     icon: <GardenIcon className="w-8 h-8" />,
-    products: generateProducts(5, { en: "Energy saving windows", ru: "Энергосберегающие окна", uz: "Energiya tejovchi oynalar" }, 20),
+    products: [
+      {
+        id: 1,
+        name: {
+          en: `Shower head / construction accessory`,
+          ru: `Душевая лейка / строительный аксессуар`,
+          uz: `Dojdik (dush lyechkasi / qurilish aksessuari)`,
+        },
+        description: {
+          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
+          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
+          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
+        },
+        mainImage: img51,
+        gallery: [],
+        brand: {
+          name: "BrandName",
+          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
+        },
+        characteristics: {
+          Weight: ` kg`,
+          Dimensions: `cm`,
+          Material: "High-Quality Steel",
+          Warranty: "2 years",
+        },
+      },
+    ],
   },
   {
     id: 6,
     name: {
-      en: "Power Equipment",
-      ru: "Силовая техника",
-      uz: "Quvvat uskunalari",
+      en: "Household & Cleaning",
+      ru: "Бытовая химия и уборка",
+      uz: "Maishiy kimyo va tozalash vositalari",
     },
     image:
       "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=600",
     icon: <PowerIcon className="w-8 h-8" />,
-    products: generateProducts(
-      6,
-      { en: "Power Equipment", ru: "Силовая техника", uz: "Quvvat uskunalari" },
-      10
-    ),
-  },
-  {
-    id: 7,
-    name: { en: "Auto Products", ru: "Автотовары", uz: "Avto mahsulotlar" },
-    image: "https://via.placeholder.com/300x200.png?text=Auto+Products",
-    icon: <AutoIcon className="w-8 h-8" />,
-    products: generateProducts(
-      7,
-      { en: "Auto Products", ru: "Автотовары", uz: "Avto mahsulotlar" },
-      25
-    ),
-  },
-  {
-    id: 8,
-    name: { en: "Fasteners", ru: "Крепеж", uz: "Mahkamlagichlar" },
-    image: "https://via.placeholder.com/300x200.png?text=Fasteners",
-    icon: <FastenerIcon className="w-8 h-8" />,
-    products: generateProducts(
-      8,
-      { en: "Fasteners", ru: "Крепеж", uz: "Mahkamlagichlar" },
-      30
-    ),
-  },
-  {
-    id: 9,
-    name: {
-      en: "Consumables",
-      ru: "Расходные материалы",
-      uz: "Sarf materiallari",
-    },
-    image: "https://via.placeholder.com/300x200.png?text=Consumables",
-    icon: <ConsumablesIcon className="w-8 h-8" />,
-    products: generateProducts(
-      9,
-      { en: "Consumables", ru: "Расходные материалы", uz: "Sarf materiallari" },
-      50
-    ),
-  },
-  {
-    id: 10,
-    name: {
-      en: "Workwear & PPE",
-      ru: "Спецодежда и СИЗ",
-      uz: "Maxsus kiyim va ShHV",
-    },
-    image: "https://via.placeholder.com/300x200.png?text=Workwear",
-    icon: <WorkwearIcon className="w-8 h-8" />,
-    products: generateProducts(
-      10,
-      { en: "Workwear", ru: "Спецодежда", uz: "Maxsus kiyim" },
-      15
-    ),
+    products: [
+      {
+        id: 1,
+        name: {
+          en: `Cleaning assortments (Azelit Lux, etc.)`,
+          ru: `Чистящие средства (Azelit Lux и др.)`,
+          uz: `Tozalash vositalari (Azelit Lux va boshqalar)`,
+        },
+        description: {
+          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
+          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
+          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
+        },
+        mainImage: img61,
+        gallery: [],
+        brand: {
+          name: "BrandName",
+          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
+        },
+        characteristics: {
+          Weight: ` kg`,
+          Dimensions: `cm`,
+          Material: "High-Quality Steel",
+          Warranty: "2 years",
+        },
+      },
+      {
+        id: 2,
+        name: {
+          en: `Glass cleaning assortments`,
+          ru: `Средства для чистки стёкол`,
+          uz: `Shisha tozalash vositalar`,
+        },
+        description: {
+          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
+          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
+          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
+        },
+        mainImage: img62,
+        gallery: [],
+        brand: {
+          name: "BrandName",
+          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
+        },
+        characteristics: {
+          Weight: ` kg`,
+          Dimensions: `cm`,
+          Material: "High-Quality Steel",
+          Warranty: "2 years",
+        },
+      },
+    ],
   },
 ];
