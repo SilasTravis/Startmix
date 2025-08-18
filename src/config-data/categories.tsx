@@ -1,5 +1,3 @@
-import React from "react";
-
 // Import all icon components
 import ElectricityIcon from "../components/icons/ElectricityIcon";
 import GardenIcon from "../components/icons/GardenIcon";
@@ -15,7 +13,7 @@ const getImageUrl = (path: string) => {
     return path;
   }
   // In production, use the base URL
-  return path.startsWith('/') ? path : `/${path}`;
+  return path.startsWith("/") ? path : `/${path}`;
 };
 
 // Product images
