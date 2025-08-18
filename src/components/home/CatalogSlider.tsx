@@ -13,7 +13,7 @@ import { categories } from "../../config-data/categories";
 const CatalogSlider: React.FC = () => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language as "en" | "ru" | "uz";
-
+  const swiperRef = useRef<SwiperType | null>(null);
   const navigationPrevRef = useRef<HTMLDivElement>(null);
   const navigationNextRef = useRef<HTMLDivElement>(null);
 
@@ -28,15 +28,13 @@ const CatalogSlider: React.FC = () => {
             modules={[Navigation]}
             spaceBetween={30}
             slidesPerView={5}
-            navigation={{
-              prevEl: navigationPrevRef.current,
-              nextEl: navigationNextRef.current,
+            loop
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
             }}
-            onBeforeInit={(swiper: SwiperType) => {
-              if (typeof swiper.params.navigation === "object") {
-                swiper.params.navigation.prevEl = navigationPrevRef.current;
-                swiper.params.navigation.nextEl = navigationNextRef.current;
-              }
+            navigation={{
+              prevEl: navigationPrevRef.current || undefined,
+              nextEl: navigationNextRef.current || undefined,
             }}
             breakpoints={{
               320: {
@@ -80,11 +78,13 @@ const CatalogSlider: React.FC = () => {
           </Swiper>
           <div
             ref={navigationPrevRef}
+            onClick={() => swiperRef.current?.slidePrev()}
             className="custom-swiper-button-prev absolute top-1/2 -translate-y-1/2 left-2 z-10 cursor-pointer bg-white rounded-full shadow-md w-10 h-10 flex items-center justify-center"
           >
             <IoChevronBack size={24} className="text-gray-600" />
           </div>
           <div
+            onClick={() => swiperRef.current?.slideNext()}
             ref={navigationNextRef}
             className="custom-swiper-button-next absolute top-1/2 -translate-y-1/2 right-2 z-10 cursor-pointer bg-white rounded-full shadow-md w-10 h-10 flex items-center justify-center"
           >
