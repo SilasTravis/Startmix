@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Hero from "../../components/home/Hero";
 import CatalogSlider from "../../components/home/CatalogSlider";
-import BrandSlider from "../../components/home/BrandSlider";
 import ImageWithText from "../../components/common/ImageWithText";
 import SectionTitle from "../../components/common/SectionTitle";
 import CallToAction from "../../components/home/CallToAction";
@@ -13,7 +12,7 @@ const Home = ({ onActionModal }: { onActionModal: () => void }) => {
     <>
       <Hero onActionModal={onActionModal} />
       <CatalogSlider />
-      <BrandSlider />
+      {/* <BrandSlider /> */}
       <SectionTitle title={t("future.title")} subtitle={t("future.subtitle")} />
       <ImageWithText
         title={t("sustainability.title")}
