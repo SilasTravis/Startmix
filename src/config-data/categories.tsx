@@ -23,7 +23,6 @@ import img51 from "../../public/images/products/5-1.jpg";
 import img61 from "../../public/images/products/6-1.jpg";
 import img62 from "../../public/images/products/6-2.jpg";
 
-
 // Interfaces for our data structure
 export interface Product {
   id: number;
@@ -110,10 +109,75 @@ export interface Category {
 // Category data array
 export const categories: Category[] = [
   {
+    id: 2,
+    name: {
+      en: "Primers & Preparatory Materials",
+      ru: "Грунтовки и подготовительные материалы",
+      uz: "Gruntovkalar",
+    },
+    image: "/images/categories/primers.jpg",
+    icon: <ElectricityIcon className="w-8 h-8" />,
+    products: [
+      {
+        id: 1,
+        name: {
+          en: `Primer`,
+          ru: `Грунтовка`,
+          uz: `Gruntovka`,
+        },
+        description: {
+          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
+          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
+          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
+        },
+        mainImage: img21,
+        gallery: [],
+        brand: {
+          name: "BrandName",
+          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
+        },
+        characteristics: {
+          Weight: ` kg`,
+          Dimensions: `cm`,
+          Material: "High-Quality Steel",
+          Warranty: "2 years",
+        },
+      },
+      {
+        id: 2,
+        name: {
+          en: `Concrete contact`,
+          ru: `Бетоноконтакт`,
+          uz: `Betonokontakt`,
+        },
+        description: {
+          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
+          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
+          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
+        },
+        mainImage: img22,
+        gallery: [],
+        brand: {
+          name: "BrandName",
+          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
+        },
+        characteristics: {
+          Weight: ` kg`,
+          Dimensions: `cm`,
+          Material: "High-Quality Steel",
+          Warranty: "2 years",
+        },
+      },
+    ],
+  },
+  {
     id: 1,
-    name: { en: "Adhesives & Binders", ru: "Клеи и связующие", uz: "Yelimlar va bog‘lovchi moddalar" },
-    image:
-      "https://images.pexels.com/photos/4312855/pexels-photo-4312855.jpeg?auto=compress&cs=tinysrgb&w=600",
+    name: {
+      en: "Adhesives & Binders",
+      ru: "Клеи и связующие",
+      uz: "Yelimlar va bog‘lovchi moddalar",
+    },
+    image: "/images/categories/kley.jpg",
     icon: <ToolIcon className="w-8 h-8" />,
     products: [
       {
@@ -194,73 +258,13 @@ export const categories: Category[] = [
     ],
   },
   {
-    id: 2,
-    name: {
-      en: "Primers & Preparatory Materials",
-      ru: "Грунтовки и подготовительные материалы",
-      uz: "Gruntovkalar",
-    },
-    image:
-      "https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg?auto=compress&cs=tinysrgb&w=600",
-    icon: <ElectricityIcon className="w-8 h-8" />,
-    products: [
-      {
-        id: 1,
-        name: {
-          en: `Primer`,
-          ru: `Грунтовка`,
-          uz: `Gruntovka`,
-        },
-        description: {
-          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
-          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
-          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
-        },
-        mainImage: img21,
-        gallery: [],
-        brand: {
-          name: "BrandName",
-          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
-        },
-        characteristics: {
-          Weight: ` kg`,
-          Dimensions: `cm`,
-          Material: "High-Quality Steel",
-          Warranty: "2 years",
-        },
-      },
-      {
-        id: 2,
-        name: {
-          en: `Concrete contact`,
-          ru: `Бетоноконтакт`,
-          uz: `Betonokontakt`,
-        },
-        description: {
-          en: `This is a detailed description for  It highlights key features, benefits, and specifications.`,
-          ru: `Это подробное описание для продукта . В нем освещаются ключевые особенности, преимущества и технические характеристики.`,
-          uz: `Bu  uchun batafsil tavsif. Unda asosiy xususiyatlar, afzalliklar va texnik tavsiflar yoritilgan.`,
-        },
-        mainImage: img22,
-        gallery: [],
-        brand: {
-          name: "BrandName",
-          icon: `https://via.placeholder.com/100x40.png?text=Brand`,
-        },
-        characteristics: {
-          Weight: ` kg`,
-          Dimensions: `cm`,
-          Material: "High-Quality Steel",
-          Warranty: "2 years",
-        },
-      },
-    ],
-  },
-  {
     id: 3,
-    name: { en: "Plastering & Leveling", ru: "Штукатурные и выравнивающие смеси", uz: "Suvog‘ va tekislash aralashmalari" },
-    image:
-      "https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=600",
+    name: {
+      en: "Plastering & Leveling",
+      ru: "Штукатурные и выравнивающие смеси",
+      uz: "Suvog‘ va tekislash aralashmalari",
+    },
+    image: "/images/categories/suvoq.jpg",
     icon: <HandToolIcon className="w-8 h-8" />,
     products: [
       {
@@ -342,9 +346,12 @@ export const categories: Category[] = [
   },
   {
     id: 4,
-    name: { en: "Finishing Compounds", ru: "Отделочные смеси", uz: "Yakuniy pardozlash aralashmalari" },
-    image:
-      "https://images.pexels.com/photos/372796/pexels-photo-372796.jpeg?auto=compress&cs=tinysrgb&w=600",
+    name: {
+      en: "Finishing Compounds",
+      ru: "Отделочные смеси",
+      uz: "Yakuniy pardozlash aralashmalari",
+    },
+    image: "/images/categories/pardoz.jpg",
     icon: <PlumbingIcon className="w-8 h-8" />,
     products: [
       {
@@ -426,9 +433,12 @@ export const categories: Category[] = [
   },
   {
     id: 5,
-    name: { en: "Accessories & Tools", ru: "Аксессуары и инструменты", uz: "Aksessuarlar va asboblar" },
-    image:
-      "https://images.pexels.com/photos/127944/pexels-photo-127944.jpeg?auto=compress&cs=tinysrgb&w=600",
+    name: {
+      en: "Accessories & Tools",
+      ru: "Аксессуары и инструменты",
+      uz: "Aksessuarlar va asboblar",
+    },
+    image: "/images/categories/assesuars.jpg",
     icon: <GardenIcon className="w-8 h-8" />,
     products: [
       {
@@ -465,8 +475,7 @@ export const categories: Category[] = [
       ru: "Бытовая химия и уборка",
       uz: "Maishiy kimyo va tozalash vositalari",
     },
-    image:
-      "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: "/images/categories/clean.jpg",
     icon: <PowerIcon className="w-8 h-8" />,
     products: [
       {

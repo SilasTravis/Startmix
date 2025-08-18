@@ -138,7 +138,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ open, onClose }) => {
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
           <a
-            href="https://t.me/your_telegram_username"
+            href="https://t.me/StartMix0000"
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 bg-[#29A9EA] text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-2 hover:bg-blue-600 transition-colors"
@@ -147,7 +147,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ open, onClose }) => {
             {t("contactModal.telegram_button")}
           </a>
           <a
-            href="tel:+998998150922"
+            href="tel:+998 98 809 40 44"
             className="flex-1 bg-[#00A75A] text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-2 hover:bg-green-600 transition-colors"
           >
             <FaPhone />

@@ -9,7 +9,7 @@ const Home = ({ onActionModal }: { onActionModal: () => void }) => {
   const { t } = useTranslation();
 
   return (
-    <>
+    <>``
       <Hero onActionModal={onActionModal} />
       <CatalogSlider />
       {/* <BrandSlider /> */}
