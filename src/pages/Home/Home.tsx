@@ -10,7 +10,7 @@ const Home = ({ onActionModal }: { onActionModal: () => void }) => {
 
   return (
     <>
-      <Hero onActionModal={onActionModal} />
+      <Hero />
       <CatalogSlider />
       {/* <BrandSlider /> */}
       <SectionTitle title={t("future.title")} subtitle={t("future.subtitle")} />
